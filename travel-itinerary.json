@@ -21,7 +21,11 @@
           "title": "Louvre Museum Tour",
           "time": "2:00 PM"
         }
-      ]
+      ],
+        "transportation": {
+    "mode": "Flight",
+    "cost": 150.00
+  }
     },
     {
       "location": "Rome",
