@@ -1,71 +1,42 @@
-// ==== tripData.js ====
-
-// Your trip data object
-const tripData = {
-  tripName: "Summer Adventure 2026",
-  traveler: {
-    name: "Nilanjana Choudhury",
-    contact: {
-      email: "nilanjana@example.com",
-      phone: "+1-555-123-4567"
+{
+  "tripName": "European Summer Adventure 2026",
+  "traveler": {
+    "name": "Nilanjana Choudhury",
+    "contact": {
+      "email": "nilanjana@example.com",
+      "phone": "+1-555-123-4567"
     }
   },
-  destinations: [
+  "destinations": [
     {
-      location: "Paris",
-      arrivalDate: "2026-07-10",
-      departureDate: "2026-07-15",
-      activities: [
-        { title: "Visit Eiffel Tower", time: "10:00 AM" },
-        { title: "Louvre Museum Tour", time: "2:00 PM" }
+      "location": "Paris",
+      "arrivalDate": "2026-07-10",
+      "departureDate": "2026-07-15",
+      "activities": [
+        {
+          "title": "Eiffel Tower visit",
+          "time": "10:00 AM"
+        },
+        {
+          "title": "Louvre Museum tour",
+          "time": "2:00 PM"
+        }
       ]
     },
     {
-      location: "Rome",
-      arrivalDate: "2026-07-16",
-      departureDate: "2026-07-20",
-      activities: [
-        { title: "Colosseum Visit", time: "11:00 AM" },
-        { title: "Vatican City Tour", time: "3:00 PM" }
+      "location": "Rome",
+      "arrivalDate": "2026-07-16",
+      "departureDate": "2026-07-20",
+      "activities": [
+        {
+          "title": "Colosseum tour",
+          "time": "9:30 AM"
+        },
+        {
+          "title": "Vatican City visit",
+          "time": "1:00 PM"
+        }
       ]
     }
   ]
-};
-
-// ==== Function to print itinerary ====
-const printItinerary = (data) => {
-  console.log(`--- ${data.tripName} ---`);
-  console.log(`Traveler: ${data.traveler.name}`);
-  console.log(`Email: ${data.traveler.contact.email}`);
-  console.log(`Phone: ${data.traveler.contact.phone}\n`);
-
-  data.destinations.forEach(dest => {
-    console.log(`📍 ${dest.location} (${dest.arrivalDate} to ${dest.departureDate})`);
-    dest.activities.forEach(act => {
-      console.log(`  - [${act.time}] ${act.title}`);
-    });
-    console.log(""); // Spacer
-  });
-};
-
-// ==== Optional: Add more helpers ====
-const addDestination = (trip, location, arrivalDate, departureDate, activities=[]) => {
-  trip.destinations.push({ location, arrivalDate, departureDate, activities });
-};
-
-const addActivity = (trip, location, title, time) => {
-  const dest = trip.destinations.find(d => d.location === location);
-  if (dest) {
-    dest.activities.push({ title, time });
-  } else {
-    console.log(`Destination "${location}" not found.`);
-  }
-};
-
-// ==== Run the itinerary ====
-printItinerary(tripData);
-
-// ==== Example of adding new destination/activity ====
-// addDestination(tripData, "Barcelona", "2026-07-21", "2026-07-25", [{title: "Beach Day", time: "12:00 PM"}]);
-// addActivity(tripData, "Rome", "Pizza Tasting", "7:00 PM");
-// printItinerary(tripData);
+}
