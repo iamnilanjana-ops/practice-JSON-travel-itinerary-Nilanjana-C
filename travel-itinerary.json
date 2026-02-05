@@ -12,6 +12,10 @@
       "location": "Paris",
       "arrivalDate": "2026-07-10",
       "departureDate": "2026-07-15",
+      "transportation": {
+        "mode": "Bus",
+        "cost": 260.00
+      },
       "activities": [
         {
           "title": "Eiffel Tower visit",
@@ -27,6 +31,10 @@
       "location": "Rome",
       "arrivalDate": "2026-07-16",
       "departureDate": "2026-07-20",
+      "transportation": {
+        "mode": "Train",
+        "cost": 480.00
+      },
       "activities": [
         {
           "title": "Colosseum tour",
@@ -35,6 +43,25 @@
         {
           "title": "Vatican City visit",
           "time": "1:00 PM"
+        }
+      ]
+    },
+    {
+      "location": "East coast Trip",
+      "arrivalDate": "2026-02-15",
+      "departureDate": "2026-02-16",
+      "transportation": {
+        "mode": "Flight",
+        "cost": 180.00
+      },
+      "activities": [
+        {
+          "title": "Washington DC",
+          "time": "11:00 AM"
+        },
+        {
+          "title": "New york city",
+          "time": "4:00 PM"
         }
       ]
     }
