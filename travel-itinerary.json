@@ -1,69 +1,46 @@
-{
-  "tripName": "Summer Adventure 2026",
-  "traveler": {
-    "name": "Nilanjana Choudhury",
-    "contact": {
-      "email": "nilanjana@example.com",
-      "phone": "+1-555-123-4567"
+const tripData = {
+  tripName: "Summer Adventure 2026",
+  traveler: {
+    name: "Nilanjana Choudhury",
+    contact: {
+      email: "nilanjana@example.com",
+      phone: "+1-555-123-4567"
     }
   },
-  "destinations": [
+  destinations: [
     {
-      "location": "Paris",
-      "arrivalDate": "2026-07-10",
-      "departureDate": "2026-07-15",
-      "activities": [
-        {
-          "title": "Visit Eiffel Tower",
-          "time": "10:00 AM"
-        },
-        {
-          "title": "Louvre Museum Tour",
-          "time": "2:00 PM"
-        }
-      ],
-      "transportation": {
-        "mode": "Flight",
-        "cost": 350.00
-      }
+      location: "Paris",
+      arrivalDate: "2026-07-10",
+      departureDate: "2026-07-15",
+      activities: [
+        { title: "Visit Eiffel Tower", time: "10:00 AM" },
+        { title: "Louvre Museum Tour", time: "2:00 PM" }
+      ]
     },
     {
-      "location": "Rome",
-      "arrivalDate": "2026-07-16",
-      "departureDate": "2026-07-20",
-      "activities": [
-        {
-          "title": "Colosseum Visit",
-          "time": "11:00 AM"
-        },
-        {
-          "title": "Vatican City Tour",
-          "time": "3:00 PM"
-        }
-      ],
-      "transportation": {
-        "mode": "Train",
-        "cost": 120.00
-      }
-    },
-    {
-      "location": "London",
-      "arrivalDate": "2026-07-21",
-      "departureDate": "2026-07-25",
-      "activities": [
-        {
-          "title": "London Eye Visit",
-          "time": "11:00 AM"
-        },
-        {
-          "title": "British Museum Tour",
-          "time": "3:00 PM"
-        }
-      ],
-      "transportation": {
-        "mode": "Bus",
-        "cost": 100.00
-      }
+      location: "Rome",
+      arrivalDate: "2026-07-16",
+      departureDate: "2026-07-20",
+      activities: [
+        { title: "Colosseum Visit", time: "11:00 AM" },
+        { title: "Vatican City Tour", time: "3:00 PM" }
+      ]
     }
   ]
-}
+};
+
+// Quick helper to log the itinerary
+const printItinerary = (data) => {
+  console.log(`--- ${data.tripName} ---`);
+  console.log(`Traveler: ${data.traveler.name}\n`);
+
+  data.destinations.forEach(dest => {
+    console.log(`📍 ${dest.location} (${dest.arrivalDate} to ${dest.departureDate})`);
+    dest.activities.forEach(act => {
+      console.log(`  - [${act.time}] ${act.title}`);
+    });
+    console.log(""); // Spacer
+  });
+};
+
+printItinerary(tripData);
